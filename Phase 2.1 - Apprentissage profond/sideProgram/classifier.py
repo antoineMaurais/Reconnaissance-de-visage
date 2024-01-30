@@ -29,13 +29,16 @@ def display_image(filename):
 
 
 # Function to classify images based on user input and create a JSON structure
-def classify_images(json_data, max_labels=None):
+def classify_images(json_data, start_label_index=0, end_label_index=100):
     classification_result = {'men': [], 'women': []}
     label_count = 0
 
     for label, images in json_data['data'].items():
-        if max_labels is not None and label_count >= max_labels:
-            break  # Arrête le traitement après un certain nombre de labels
+        if label_count < start_label_index:
+            label_count += 1
+            continue  # Ignorer les labels avant l'indice de début
+        if label_count >= end_label_index:
+            break  # Arrêter le traitement après l'indice de fin
 
         if images:  # If there are images for the label
             # Display the first image of the label
@@ -59,6 +62,6 @@ def classify_images(json_data, max_labels=None):
     print("Classification complete! Results saved to classification_result.json.")
 
 
-# Exemple d'utilisation : traiter seulement les 100 premiers labels
-classify_images(json_content, max_labels=2)
+# Exemple d'utilisation : traiter seulement les labels de 0 à 100
+classify_images(json_content, start_label_index=200, end_label_index=300)
 
