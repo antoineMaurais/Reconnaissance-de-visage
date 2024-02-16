@@ -1,5 +1,7 @@
 # Reconnaissance-de-visage
 
+**Github : https://github.com/antoineMaurais/Reconnaissance-de-visage**
+
 ### Architecture globale du fichier 
 
 - Dans le dossier "Data", on retrouvera les différents fichiers contenant des informations sur notre jeu de données.
