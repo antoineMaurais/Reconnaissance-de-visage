@@ -17,4 +17,5 @@ Voir fichier "Phase 1/phase 1 - détection et reconnaissance par attributs.ipynb
 
 ### Phase 2 
 
-Voir fichier "Phase 2.1 - Apprentissage profond/apprentissage-profond.ipynb"
+Voir fichier **"Phase 2.1 - Apprentissage profond/apprentissage-profond.ipynb"**.
+
